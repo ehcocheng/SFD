@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="重庆申方设计 | 专业空间设计机构 | 做能解决问题的设计">
+    <title>重庆申方设计 | SHENFANG DESIGN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+        
+        :root {
+            --gold: #C8A96B;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .heading {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(17,17,17,0.75), rgba(17,17,17,0.85)), url('https://picsum.photos/id/1015/2000/1200') center/cover fixed;
+        }
+        
+        .glass {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover:after { width: 100%; }
+        
+        .project-card {
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-card:hover {
+            transform: translateY(-15px);
+        }
+        .project-img {
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-card:hover .project-img {
+            transform: scale(1.06);
+        }
+        
+        /* 隐藏滚动条但保持平滑滑动 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-[#111111] text-[#F5F5F5] overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16 py-7 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="text-4xl heading tracking-tighter">申方</div>
+                <div class="text-xs leading-tight">
+                    重庆申方设计<br>
+                    <span class="text-[#C8A96B]">SHENFANG DESIGN</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-10 text-sm tracking-widest font-light">
+                <a href="#philosophy" onclick="smoothScrollTo('philosophy')" class="nav-link">理念</a>
+                <a href="#services" onclick="smoothScrollTo('services')" class="nav-link">服务</a>
+                <a href="#projects" onclick="smoothScrollTo('projects')" class="nav-link">经典案例</a>
+                <a href="#showflats" onclick="smoothScrollTo('showflats')" class="nav-link">精品样板间</a>
+                <a href="#about" onclick="smoothScrollTo('about')" class="nav-link">关于</a>
+                <a href="#clients" onclick="smoothScrollTo('clients')" class="nav-link">客户</a>
+                <a href="#contact" onclick="smoothScrollTo('contact')" class="nav-link">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16 relative z-10 pt-20">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center px-6 py-3 border border-[#C8A96B] text-[#C8A96B] text-xs tracking-[3px] mb-8">PROFESSIONAL SPATIAL DESIGN STUDIO</div>
+                <h1 class="heading text-6xl md:text-7xl lg:text-8xl leading-none tracking-tighter mb-6">
+                    做能解决问题的设计
+                </h1>
+                <p class="text-3xl text-white/80">Design That Solves Problems</p>
+                <p class="mt-10 text-lg max-w-md text-white/70">
+                    重庆申方设计专注于地产、酒店、商业及高端办公空间设计，通过设计创造商业价值与品牌影响力。
+                </p>
+                <div class="flex flex-wrap gap-6 mt-16">
+                    <button onclick="smoothScrollTo('projects')" class="px-10 py-6 border border-white/80 hover:bg-white hover:text-black transition-all text-sm tracking-widest">探索案例</button>
+                    <button onclick="smoothScrollTo('contact')" class="px-10 py-6 bg-[#C8A96B] text-black hover:bg-white transition-all text-sm tracking-widest">开启合作</button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-12 left-1/2 flex flex-col items-center text-xs tracking-widest">
+            SCROLL TO EXPLORE
+            <i class="fa-solid fa-chevron-down mt-3 animate-bounce"></i>
+        </div>
+    </header>
+
+    <section id="philosophy" class="py-32 bg-[#1F1F1F]">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16">
+            <div class="grid lg:grid-cols-12 gap-20 items-center">
+                <div class="lg:col-span-5">
+                    <h2 class="heading text-6xl leading-tight">设计不仅创造美感<br>更创造价值</h2>
+                    <p class="mt-8 text-[#C8A96B] text-xl">Beyond Aesthetics. Creating Value Through Design.</p>
+                </div>
+                <div class="lg:col-span-7 text-lg text-white/80 leading-relaxed space-y-6">
+                    <p>我们相信设计应当回应真实需求。</p>
+                    <p>重庆申方设计长期专注于商业空间、地产空间与酒店空间研究，通过深度市场调研、客群分析和商业逻辑研究，为客户提供兼具审美与商业价值的系统解决方案。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-black border-y border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div><div id="stat-projects" class="text-6xl text-[#C8A96B]">100</div><p class="mt-4 text-sm tracking-widest">+ 项目经验</p></div>
+            <div><div id="stat-years" class="text-6xl text-[#C8A96B]">10</div><p class="mt-4 text-sm tracking-widest">+ 年行业经验</p></div>
+            <div><div id="stat-clients" class="text-6xl text-[#C8A96B]">8</div><p class="mt-4 text-sm tracking-widest">+ 头部地产客户</p></div>
+            <div><div id="stat-response" class="text-6xl text-[#C8A96B]">48</div><p class="mt-4 text-sm tracking-widest">小时响应</p></div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-[#1F1F1F]">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16">
+            <div class="text-center mb-20">
+                <span class="text-xs uppercase tracking-[0.3em] text-[#C8A96B] block mb-3">EXPERTISE</span>
+                <h2 class="heading text-6xl">服务领域</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="services-container"></div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 bg-black">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16">
+            <div class="mb-16">
+                <span class="text-xs uppercase tracking-[0.3em] text-[#C8A96B] block mb-3">PORTFOLIO</span>
+                <h2 class="heading text-6xl">经典案例</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container"></div>
+        </div>
+    </section>
+
+    <section id="showflats" class="py-32 bg-[#161616] border-t border-white/5 overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <span class="text-xs uppercase tracking-[0.3em] text-[#C8A96B] block mb-3">RESIDENTIAL EXPERIENCE</span>
+                <h2 class="heading text-6xl">精品样板间</h2>
+            </div>
+            <p class="text-sm text-white/50 max-w-md font-light tracking-wide">
+                推敲特定人群的现代生活美学演练，在材质、动线与人居情绪之间找到最高级的平衡点。
+            </p>
+        </div>
+        
+        <div class="flex gap-8 overflow-x-auto px-8 lg:px-16 pb-8 pt-4 no-scrollbar snap-x" id="showflats-container">
+            </div>
+    </section>
+
+    <section id="about" class="py-32 bg-[#1F1F1F]">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16 max-w-3xl">
+            <h2 class="heading text-6xl mb-12">关于申方</h2>
+            <div class="text-lg text-white/80 space-y-6">
+                <p>重庆申方设计是一家专业空间设计与软装配饰设计机构，专注于地产、酒店、商业及高端办公空间设计服务。</p>
+                <p>我们坚持“做能解决问题的设计”，通过设计优势、产品优势、成本优势与服务优势，为客户创造可持续的商业价值。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-24 bg-black">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16">
+            <h2 class="heading text-5xl text-center mb-16">合作客户</h2>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-x-12 gap-y-10 text-center opacity-75">
+                <div>金科地产</div>
+                <div>碧桂园</div>
+                <div>融创中国</div>
+                <div>中国金茂</div>
+                <div>绿地集团</div>
+                <div>金融街</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-[#111111]">
+        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16 grid md:grid-cols-12 gap-20">
+            <div class="md:col-span-5">
+                <h2 class="heading text-6xl">开启新项目</h2>
+                <p class="mt-8 text-white/70">我们期待与有远见的客户共同打造具有商业价值的空间作品。</p>
+                <div class="mt-12 space-y-6">
+                    <a href="mailto:cyuanq@foxmail.com" class="block text-xl hover:text-[#C8A96B]">
+                        <i class="fa-solid fa-envelope text-xs mr-3 text-[#C8A96B]"></i>cyuanq@foxmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-span-7 glass p-12 rounded-3xl">
+                <form class="space-y-8">
+                    <div class="grid grid-cols-2 gap-8">
+                        <input type="text" placeholder="姓名" class="bg-transparent border-b border-white/30 pb-4 focus:outline-none w-full">
+                        <input type="text" placeholder="公司" class="bg-transparent border-b border-white/30 pb-4 focus:outline-none w-full">
+                    </div>
+                    <input type="tel" placeholder="电话" class="bg-transparent border-b border-white/30 pb-4 focus:outline-none w-full">
+                    <textarea placeholder="项目需求描述" rows="5" class="bg-transparent border-b border-white/30 pb-4 focus:outline-none w-full"></textarea>
+                    <button type="button" onclick="submitForm()" class="w-full py-7 bg-[#C8A96B] text-black font-medium text-lg tracking-wider">提交咨询</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 text-center text-xs text-white/40 border-t border-white/10">
+        © 2026 重庆申方设计 SHENFANG DESIGN. All Rights Reserved.
+    </footer>
+
+    <script>
+        const servicesData = [
+            { title: "售楼中心", desc: "高端展示空间设计" },
+            { title: "样板房", desc: "生活场景营造" },
+            { title: "酒店空间", desc: "奢华体验设计" },
+            { title: "商业空间", desc: "消费场景塑造" }
+        ];
+
+        function renderServices() {
+            const container = document.getElementById('services-container');
+            container.innerHTML = servicesData.map(s => `
+                <div class="glass p-10 rounded-3xl hover:border-[#C8A96B] border border-transparent transition-all">
+                    <h3 class="heading text-3xl mb-4">${s.title}</h3>
+                    <p class="text-white/70">${s.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        const commercialProjects = [
+            {
+                title: "金科江津邻里销售中心",
+                type: "社区生活中心",
+                img: "https://s41.ax1x.com/2026/06/10/pmugNV0.jpg"
+            },
+            {
+                title: "石家庄·金科正定府",
+                type: "海派城市会客厅",
+                img: "https://s41.ax1x.com/2026/06/10/pmusM6I.png"
+            },
+            {
+                title: "金科重庆总部",
+                type: "办公空间设计",
+                img: "https://s41.ax1x.com/2026/06/10/pmucE7V.jpg"
+            },
+            {
+                title: "北方新生活盛文锦州书城",
+                type: "文化商业综合体",
+                img: "https://s41.ax1x.com/2026/06/10/pmusupd.png"
+            },
+            {
+                title: "金科美邻汇商业",
+                type: "社区商业空间",
+                img: "https://s41.ax1x.com/2026/06/10/pmus878.jpg"
+            },
+            {
+                title: "照母山天玺销售中心",
+                type: "高端地产展示",
+                img: "https://s41.ax1x.com/2026/06/10/pmusK1A.md.png"
+            },
+            {
+                title: "重庆俊豪观棠府",
+                type: "销售中心",
+                img: "https://s41.ax1x.com/2026/06/10/pmusmfH.md.png"
+            },
+            {
+                title: "上海财信大厦",
+                type: "办公综合体",
+                img: "https://i.ibb.co/wZryy8mK/223232.jpg"
+            }
+        ];
+
+        // 核心改动：已精准将样板间图片替换为您提供的最新三组真实外链
+        const showflatProjects = [
+            {
+                title: "现代简奢主义样板间",
+                type: "生活美学场景 / 12号作品",
+                img: "https://i.ibb.co/wFX3LNwP/12.png"
+            },
+            {
+                title: "极简奢华住宅样板间",
+                type: "空间重构意境 / 19号作品",
+                img: "https://i.ibb.co/xtDYzZQf/19.png"
+            },
+            {
+                title: "当代人文艺术样板间",
+                type: "高定私享住宅 / 23号作品",
+                img: "https://i.ibb.co/dwr3Pznz/23.png"
+            }
+        ];
+
+        function renderProjects() {
+            // 渲染商业与展示中心案例部分
+            const projectsContainer = document.getElementById('projects-container');
+            projectsContainer.innerHTML = commercialProjects.map(p => `
+                <div class="project-card glass rounded-3xl overflow-hidden cursor-pointer group">
+                    <img src="${p.img}" class="project-img w-full aspect-video object-cover" alt="${p.title}">
+                    <div class="p-8">
+                        <h3 class="heading text-2xl">${p.title}</h3>
+                        <p class="text-white/70 mt-2">${p.type}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            // 渲染更换图源后的专属精品样板间滑块模块
+            const showflatsContainer = document.getElementById('showflats-container');
+            showflatsContainer.innerHTML = showflatProjects.map(p => `
+                <div class="min-w-[320px] md:min-w-[460px] snap-start project-card glass rounded-3xl overflow-hidden cursor-pointer group">
+                    <div class="overflow-hidden">
+                        <img src="${p.img}" class="project-img w-full h-[300px] object-cover" alt="${p.title}">
+                    </div>
+                    <div class="p-6 bg-black/40">
+                        <span class="text-xs text-[#C8A96B] tracking-wider uppercase font-mono">Show Flat</span>
+                        <h3 class="heading text-xl mt-1">${p.title}</h3>
+                        <p class="text-white/50 text-xs mt-1">${p.type}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function animateStats() {
+            const targets = [
+                {id: 'stat-projects', end: 100},
+                {id: 'stat-years', end: 10},
+                {id: 'stat-clients', end: 8},
+                {id: 'stat-response', end: 48}
+            ];
+            targets.forEach(t => {
+                let count = 0;
+                const step = Math.ceil(t.end / 30);
+                const interval = setInterval(() => {
+                    count += step;
+                    if (count >= t.end) {
+                        count = t.end;
+                        clearInterval(interval);
+                    }
+                    document.getElementById(t.id).textContent = count;
+                }, 50);
+            });
+        }
+
+        function smoothScrollTo(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function submitForm() {
+            alert("感谢您的咨询！申方设计团队将在48小时内与您联系。");
+        }
+
+        window.onload = function() {
+            renderServices();
+            renderProjects();
+            animateStats();
+            console.log('%c重庆申方设计官网 — 样板间专属图源优化更新完毕', 'color:#C8A96B; font-family:monospace');
+        };
+    </script>
+</body>
+</html>
